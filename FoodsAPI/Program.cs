@@ -26,10 +26,12 @@ app.MapGet("/api/foods", (ILogger<Program> _logger) =>
 {
     _logger.Log(LogLevel.Information, "Getting all foods.");
 
-    APIResponse response = new();
-    response.Result = FoodData.Foods;
-    response.IsSuccess = true;
-    response.StatusCode = HttpStatusCode.OK;
+    APIResponse response = new()
+    {
+        Result = FoodData.Foods,
+        IsSuccess = true,
+        StatusCode = HttpStatusCode.OK
+    };
 
     return Results.Ok(response);
 })
@@ -198,3 +200,6 @@ app.MapDelete("/api/foods/{id:int}", (IMapper _mapper, ILogger<Program> _logger,
 app.UseHttpsRedirection();
 
 app.Run();
+
+// For the tests
+public partial class Program { }
