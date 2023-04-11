@@ -24,8 +24,7 @@ dotnet test
 ```
 
 ## Technologies💻
-<strong>.NET 7</strong>
-<br />
-<strong>xUnit</strong>
+- **.NET 7**
+- **xUnit**
 
 ## Thanks for checking out the repository! 💚
